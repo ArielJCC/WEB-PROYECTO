@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Software de gestión de inventario de mobiliario para universidades"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Título de la página -->
+    <title>Uleam - Gestión de Inventario de Mobiliario</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/core-img/favicon.ico" />
+
+    <!-- Hoja de estilos principal -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div id="preloader">
+      <i class="circle-preloader"></i>
+    </div>
+
+    <!-- Encabezado -->
+    <header class="header-area">
+      <!-- Área de encabezado superior -->
+      <div class="top-header">
+        <div class="container h-100">
+          <div class="row h-100">
+            <div class="col-12 h-100">
+              <div
+                class="header-content h-100 d-flex align-items-center justify-content-between"
+              >
+                <!-- Logo de la universidad -->
+                <div class="academy-logo">
+                  <a href="Home.html">
+                    <img
+                      src="img/core-img/logo.png"
+                      alt="Logo Universidad XYZ"
+                    />
+                  </a>
+                </div>
+                <!-- Contenido de inicio de sesión -->
+                <div class="login-content">
+                  <a href="perfil.html">Perfil &nbsp; </a>
+                  <!-- Función para cerrar sesión -->
+                  <a
+                    href="javascript:void(0);"
+                    onclick="confirmarCerrarSesion()"
+                    >Cerrar Sesión</a
+                  >
+                  <script>
+                    function confirmarCerrarSesion() {
+                      var confirmacion = confirm(
+                        "¿Estás seguro de que deseas cerrar la sesión?"
+                      );
+                      if (confirmacion) {
+                        window.location.href = "Registro-Login/login.html";
+                      }
+                    }
+                  </script>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Menú de navegación -->
+      <div class="academy-main-menu">
+        <div class="classy-nav-container breakpoint-off">
+          <div class="container">
+            <!-- Menú -->
+            <nav class="classy-navbar justify-content-between" id="academyNav">
+              <!-- Interruptor de navegación -->
+              <div class="classy-navbar-toggler">
+                <span class="navbarToggler"
+                  ><span></span><span></span><span></span
+                ></span>
+              </div>
+              <!-- Menú -->
+              <div class="classy-menu">
+                <!-- Botón de cierre -->
+                <div class="classycloseIcon">
+                  <div class="cross-wrap">
+                    <span class="top"></span><span class="bottom"></span>
+                  </div>
+                </div>
+                <!-- Navegación -->
+                <div class="classynav">
+                  <ul>
+                    <li><a href="Home.html">Inicio</a></li>
+                    <li><a href="inventario.html">Inventario</a></li>
+                    <li>
+                      <a href="Asignacion de Mobiliarios.html"
+                        >Asignación de Mobiliarios</a
+                      >
+                    </li>
+                    <li>
+                      <a href="gestion_mobiliario.html"
+                        >Gestión de Mobiliario</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- Información de contacto -->
+              <div class="calling-info">
+                <div class="call-center">
+                  <a href="https://wa.link/cj230k">
+                    <i class="icon-telephone-2"></i>
+                    <span>(+593) 99 855 4842</span>
+                  </a>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Área del héroe -->
+    <section class="hero-area">
+      <div class="hero-slides owl-carousel">
+        <!-- Diapositiva de héroe individual -->
+        <div
+          class="single-hero-slide bg-img"
+          style="background-image: url(img/bg-img/bg-1.jpg)"
+        >
+          <div class="container h-100">
+            <div class="row h-100 align-items-center">
+              <div class="col-12">
+                <div class="hero-slides-content">
+                  <h4 data-animation="fadeInUp" data-delay="100ms">
+                    Gestión de Inventario
+                  </h4>
+                  <h2 data-animation="fadeInUp" data-delay="400ms">
+                    Optimiza el control de todo el mobiliario de la universidad.
+                  </h2>
+                  <a
+                    href="inventario.html"
+                    class="btn academy-btn"
+                    data-animation="fadeInUp"
+                    data-delay="700ms"
+                    >Ver Inventario</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Diapositiva de héroe individual -->
+        <div
+          class="single-hero-slide bg-img"
+          style="background-image: url(img/bg-img/bg-2.jpg)"
+        >
+          <div class="container h-100">
+            <div class="row h-100 align-items-center">
+              <div class="col-12">
+                <div class="hero-slides-content">
+                  <h4 data-animation="fadeInUp" data-delay="100ms">
+                    Gestión del Mobiliario
+                  </h4>
+                  <h2 data-animation="fadeInUp" data-delay="400ms">
+                    Optimiza la información del mobiliario de la universidad.
+                  </h2>
+                  <a
+                    href="gestion_mobiliario.html"
+                    class="btn academy-btn"
+                    data-animation="fadeInUp"
+                    data-delay="700ms"
+                    >Ir</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Área del pie de página -->
+    <footer class="footer-area">
+      <div class="main-footer-area section-padding-100-0">
+        <div class="container">
+          <div class="row">
+            <!-- Widget de pie de página -->
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="footer-widget mb-100">
+                <div class="widget-title">
+                  <a href="#"
+                    ><img
+                      src="img/core-img/logo2.png"
+                      alt="Logo Universidad XYZ"
+                  /></a>
+                </div>
+                <p>
+                  En la Uleam, nos comprometemos con una gestión eficiente y
+                  responsable del inventario de mobiliario.
+                </p>
+                <!-- Iconos de redes sociales -->
+                <div class="footer-social-info">
+                  <a href="https://www.facebook.com/" target="_blank"
+                    ><i class="fa fa-facebook"></i
+                  ></a>
+                  <a href="https://twitter.com/" target="_blank"
+                    ><i class="fa fa-twitter"></i
+                  ></a>
+                  <a href="https://www.instagram.com/" target="_blank"
+                    ><i class="fa fa-instagram"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <!-- Widget de pie de página -->
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="footer-widget mb-100">
+                <div class="widget-title">
+                  <h6>Contacto</h6>
+                </div>
+                <!-- Información de contacto individual -->
+                <div class="single-contact d-flex mb-30">
+                  <i class="icon-placeholder"></i>
+                  <p>Manta, Manabí, Ecuador</p>
+                </div>
+                <!-- Información de contacto individual -->
+                <div class="single-contact d-flex mb-30">
+                  <i class="icon-telephone-1"></i>
+                  <p>93-808-8613 <br />Oficina: 99-808-8648</p>
+                </div>
+                <!-- Información de contacto individual -->
+                <div class="single-contact d-flex">
+                  <i class="icon-contract"></i>
+                  <p>uleam@gmail.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Área del pie de página inferior -->
+      <div class="bottom-footer-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p>
+                Copyright &copy;
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                Uleam - Gestión de Inventario de Mobiliario | Todos los derechos
+                reservados
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Fin del área del pie de página -->
+
+    <!-- Todos los scripts de JavaScript -->
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <script src="js/plugins/plugins.js"></script>
+    <script src="js/active.js"></script>
+  </body>
+</html>

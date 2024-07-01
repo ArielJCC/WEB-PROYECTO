@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Sistema de Gestión de Inventario de Mobiliario"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Ajuste de la vista -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Título de la página -->
+    <title>Uleam - Asignación de Inventario de Mobiliario</title>
+    <!-- Favicon (iconos)-->
+    <link rel="icon" href="img/core-img/favicon.ico" />
+    <!-- Estilos principales -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Preloader (animacion de carga de pagina)-->
+    <div id="preloader">
+      <i class="circle-preloader"></i>
+    </div>
+
+    <!-- Encabezado -->
+    <header class="header-area">
+      <!-- Encabezado superior -->
+      <div class="top-header">
+        <div class="container h-100">
+          <div class="row h-100">
+            <div class="col-12 h-100">
+              <div
+                class="header-content h-100 d-flex align-items-center justify-content-between"
+              >
+                <!-- Logo de la pagina-->
+                <div class="academy-logo">
+                  <a href="Home.html"
+                    ><img src="img/core-img/logo.png" alt="Logo"
+                  /></a>
+                </div>
+                <!-- Contenido de inicio de sesión -->
+                <div class="login-content">
+                  <a href="perfil.html">Perfil &nbsp; </a>
+                  <a
+                    href="javascript:void(0);"
+                    onclick="confirmarCerrarSesion()"
+                    >Cerrar Sesión</a
+                  >
+                  <!-- Script de cierre de sesión -->
+                  <script>
+                    function confirmarCerrarSesion() {
+                      // Mostrar el mensaje de confirmación
+                      var confirmacion = confirm(
+                        "¿Estás seguro de que deseas cerrar la sesión?"
+                      );
+                      // Si el usuario hace clic en "Aceptar", redirige a la página de inicio de sesión
+                      if (confirmacion) {
+                        window.location.href = "Registro-Login/login.html";
+                      }
+                      // Si el usuario hace clic en "Cancelar", no hace nada
+                    }
+                  </script>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Menú de navegación -->
+      <div class="academy-main-menu">
+        <div class="classy-nav-container breakpoint-off">
+          <div class="container">
+            <!-- Menú -->
+            <nav class="classy-navbar justify-content-between" id="academyNav">
+              <!-- Botón para desplegar el menú en dispositivos pequeños -->
+              <div class="classy-navbar-toggler">
+                <span class="navbarToggler"
+                  ><span></span><span></span><span></span
+                ></span>
+              </div>
+
+              <!-- Menú -->
+              <div class="classy-menu">
+                <!-- Botón para cerrar el menú -->
+                <div class="classycloseIcon">
+                  <div class="cross-wrap">
+                    <span class="top"></span><span class="bottom"></span>
+                  </div>
+                </div>
+
+                <!-- Elementos de navegación -->
+                <div class="classynav">
+                  <ul>
+                    <li><a href="./Home.html">Inicio</a></li>
+                    <li><a href="./inventario.html">Inventario</a></li>
+                    <li>
+                      <a href="./Asignacion de Mobiliarios.html"
+                        >Asignación de Mobiliario</a
+                      >
+                    </li>
+                    <li>
+                      <a href="./gestion_mobiliario.html"
+                        >Gestión de Mobiliario</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <!-- Fin de elementos de navegación -->
+              </div>
+
+              <!-- Información de contacto -->
+              <div class="calling-info">
+                <div class="call-center">
+                  <a href="https://wa.link/cj230k"
+                    ><i class="icon-telephone-2"></i
+                    ><span>(+593) 99 855 4842</span></a
+                  >
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Fin del encabezado -->
+
+    <!-- Área del la informacion dentro del cuadro verde -->
+    <div
+      class="breadcumb-area bg-img"
+      style="background-image: url(img/bg-img/breadcumb.jpg)"
+    >
+      <div class="bradcumbContent">
+        <h2>Asignar un Mobiliario</h2>
+      </div>
+    </div>
+    <!-- Fin del área informacion dentro del cuadro verde -->
+
+    <!-- Área de asignación de mobiliario -->
+    <div class="top-popular-courses-area mt-50 section-padding-100-70">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div
+              class="section-heading text-center mx-auto wow fadeInUp"
+              data-wow-delay="300ms"
+            >
+              <span>Gestión de Inventario</span>
+              <h3>Asignar Mobiliario</h3>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <!-- Formulario de asignación de mobiliario -->
+            <form id="asignarMobiliarioForm">
+              <div class="form-group">
+                <label for="nombreSolicitante">Nombre del Solicitante:</label>
+                <input type="text" class="form-control" id="nombreSolicitante"
+                pattern="^[a-zA-Z\s.,;:!?'\"\(\)\-áéíóúÁÉÍÓÚñÑüÜ]{1,50}$"
+                title="El nombre debe contener solo letras, espacios y algunos
+                caracteres de puntuación, y no debe exceder los 50 caracteres."
+                required />
+              </div>
+              <div class="form-group">
+                <label for="entidadSolicitante"
+                  >Entidad del Solicitante (ej. Facultad de Ingeniería):</label
+                >
+                <input type="text" class="form-control" id="entidadSolicitante"
+                pattern="^[a-zA-Z\s.,;:!?'\"\(\)\-áéí óúÁÉÍÓÚñÑüÜ]{1,100}$"
+                title="La entidad debe contener solo letras, espacios y algunos
+                caracteres de puntuación, y no debe exceder los 100 caracteres."
+                required />
+              </div>
+              <div class="form-group">
+                <label for="mobiliario">Mobiliario:</label>
+                <select class="form-control" id="mobiliario" required></select>
+              </div>
+              <button type="submit" class="btn academy-btn mt-30">
+                Asignar
+              </button>
+            </form>
+            <!-- Fin del formulario de asignación de mobiliario -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Fin del área de asignación de mobiliario -->
+
+    <!-- Área del pie de página -->
+    <footer class="footer-area">
+      <div class="main-footer-area section-padding-100-0">
+        <div class="container">
+          <div class="row">
+            <!-- Widget del pie de página -->
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="footer-widget mb-100">
+                <div class="widget-title">
+                  <a href="#"
+                    ><img
+                      src="img/core-img/logo2.png"
+                      alt="Logo Universidad XYZ"
+                  /></a>
+                </div>
+                <p>
+                  En la Uleam, nos comprometemos con una gestión eficiente y
+                  responsable del inventario de mobiliario.
+                </p>
+                <div class="footer-social-info">
+                  <a href="https://www.facebook.com/" target="_blank"
+                    ><i class="fa fa-facebook"></i
+                  ></a>
+                  <a href="https://twitter.com/" target="_blank"
+                    ><i class="fa fa-twitter"></i
+                  ></a>
+                  <a href="https://www.instagram.com/" target="_blank"
+                    ><i class="fa fa-instagram"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <!-- Fin del widget del pie de página -->
+
+            <!-- Widget del pie de página -->
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="footer-widget mb-100">
+                <div class="widget-title">
+                  <h6>Contacto</h6>
+                </div>
+                <div class="single-contact d-flex mb-30">
+                  <i class="icon-placeholder"></i>
+                  <p>Manta, Manabí, Ecuador</p>
+                </div>
+                <div class="single-contact d-flex mb-30">
+                  <i class="icon-telephone-1"></i>
+                  <p>93-808-8613 <br />Oficina: 99-808-8648</p>
+                </div>
+                <div class="single-contact d-flex">
+                  <i class="icon-contract"></i>
+                  <p>uleam@gmail.com</p>
+                </div>
+              </div>
+            </div>
+            <!-- Fin del widget del pie de página -->
+          </div>
+        </div>
+      </div>
+      <div class="bottom-footer-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p>
+                <!-- Derechos de autor -->
+                Copyright &copy;
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                Uleam - Gestión de Inventario de Mobiliario | Todos los derechos
+                reservados
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Fin del área del pie de página -->
+
+    <!-- Scripts de JavaScript -->
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <script src="js/plugins/plugins.js"></script>
+    <script src="js/active.js"></script>
+    <script>
+      // Función para cargar el mobiliario en la lista desplegable
+      function cargarMobiliario() {
+        var registros =
+          JSON.parse(localStorage.getItem("registrosMobiliario")) || [];
+        var selectMobiliario = document.getElementById("mobiliario");
+        // Limpiar el select
+        selectMobiliario.innerHTML = "";
+        // Agregar la opción inicial
+        var option = document.createElement("option");
+        option.value = "";
+        option.text = "Selecciona el mobiliario registrado";
+        selectMobiliario.add(option);
+        // Iterar sobre los registros y agregar opciones al select
+        registros.forEach(function (registro) {
+          var option = document.createElement("option");
+          option.value = registro.deviceType;
+          // Simplificar la información para mostrarla en la opción
+          var displayText =
+            registro.deviceType +
+            " - Material: " +
+            registro.material +
+            ", Color: " +
+            registro.color;
+          option.text = displayText;
+          selectMobiliario.add(option);
+        });
+      }
+
+      // Ejecutar la función al cargar la página
+      window.onload = function () {
+        cargarMobiliario();
+      };
+
+      // Añadir evento al formulario para manejar la asignación
+      document
+        .getElementById("asignarMobiliarioForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          // Validar campos manualmente
+          var nombreSolicitante =
+            document.getElementById("nombreSolicitante").value;
+          var entidadSolicitante =
+            document.getElementById("entidadSolicitante").value;
+          var mobiliario = document.getElementById("mobiliario").value;
+
+          var nombrePattern = /^[a-zA-Z\s.,;:!?'\"\(\)\-áéíóúÁÉÍÓÚñÑüÜ]{1,50}$/;
+          var entidadPattern =
+            /^[a-zA-Z\s.,;:!?'\"\(\)\-áéíóúÁÉÍÓÚñÑüÜ]{1,100}$/;
+
+          if (
+            !nombrePattern.test(nombreSolicitante) ||
+            !entidadPattern.test(entidadSolicitante) ||
+            mobiliario === ""
+          ) {
+            alert("Por favor, asegúrese de que todos los campos sean válidos.");
+            return;
+          }
+          // Mostrar mensaje de confirmación
+          alert("¡El mobiliario ha sido asignado exitosamente!");
+
+          // Resetear el formulario después de la asignación
+          document.getElementById("asignarMobiliarioForm").reset();
+        });
+    </script>
+  </body>
+</html>

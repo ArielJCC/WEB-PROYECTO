@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Título -->
+    <title>Uleam - Inventario de Mobiliarios</title>
+    <!-- Favicon -->
+    <link rel="icon" href="img/core-img/favicon.ico" />
+    <!-- Hoja de estilos principal -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ##### Área del Encabezado ##### -->
+    <header class="header-area">
+      <!-- Área del Encabezado Superior -->
+      <div class="top-header">
+        <div class="container h-100">
+          <div class="row h-100">
+            <div class="col-12 h-100">
+              <div
+                class="header-content h-100 d-flex align-items-center justify-content-between"
+              >
+                <!-- Logo de la academia -->
+                <div class="academy-logo">
+                  <a href="Home.html"
+                    ><img src="img/core-img/logo.png" alt=""
+                  /></a>
+                </div>
+                <!-- Contenido de inicio de sesión -->
+                <div class="login-content">
+                  <a href="perfil.html">Perfil &nbsp; </a>
+                  <a
+                    href="javascript:void(0);"
+                    onclick="confirmarCerrarSesion()"
+                    >Cerrar Sesión</a
+                  >
+                  <!-- Script para confirmar cierre de sesión -->
+                  <script>
+                    function confirmarCerrarSesion() {
+                      var confirmacion = confirm(
+                        "¿Estás seguro de que deseas cerrar la sesión?"
+                      );
+                      if (confirmacion) {
+                        window.location.href = "Registro-Login/login.html";
+                      }
+                    }
+                  </script>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Área de la barra de navegación -->
+      <div class="academy-main-menu">
+        <div class="classy-nav-container breakpoint-off">
+          <div class="container">
+            <nav class="classy-navbar justify-content-between" id="academyNav">
+              <div class="classy-navbar-toggler">
+                <span class="navbarToggler"
+                  ><span></span><span></span><span></span
+                ></span>
+              </div>
+              <div class="classy-menu">
+                <div class="classycloseIcon">
+                  <div class="cross-wrap">
+                    <span class="top"></span><span class="bottom"></span>
+                  </div>
+                </div>
+                <div class="classynav">
+                  <ul>
+                    <li><a href="Home.html">Inicio</a></li>
+                    <li><a href="inventario.html">Inventario</a></li>
+                    <li>
+                      <a href="Asignacion de Mobiliarios.html"
+                        >Asignación de Mobiliarios</a
+                      >
+                    </li>
+                    <li>
+                      <a href="gestion_mobiliario.html"
+                        >Gestión de Mobiliario</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="calling-info">
+                <div class="call-center">
+                  <a href="https://wa.link/cj230k"
+                    ><i class="icon-telephone-2"></i
+                    ><span>(+593) 99 855 4842</span></a
+                  >
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- ##### Área del Encabezado Fin ##### -->
+
+    <!-- ##### Área de Migas de Pan Inicio ##### -->
+    <div
+      class="breadcumb-area bg-img"
+      style="background-image: url(img/bg-img/breadcumb.jpg)"
+    >
+      <div class="bradcumbContent">
+        <h2>Inventario de Mobiliario</h2>
+      </div>
+    </div>
+    <!-- ##### Área de Migas de Pan Fin ##### -->
+
+    <!-- ##### Área de Contacto Inicio ##### -->
+    <section class="contact-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="contact-content">
+              <div class="row">
+                <div class="col-12 col-lg-5">
+                  <!-- Información de contacto del inventario -->
+                  <div
+                    class="contact-information wow fadeInUp"
+                    data-wow-delay="400ms"
+                  >
+                    <div class="section-heading text-left">
+                      <span></span>
+                      <h3>Inventario</h3>
+                      <p class="mt-30">Mobiliarios Registrados:</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <!-- Lista de inventario -->
+                  <div class="row" id="inventarioLista"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ##### Área de Contacto Fin ##### -->
+
+    <!-- Modal para editar y eliminar registros -->
+    <div id="modalEditarEliminar" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="cerrarModal()">&times;</span>
+        <h2>Editar o Eliminar Registro</h2>
+        <form id="editarForm">
+          <!-- Formulario para editar registro -->
+          <label for="editDeviceType">Tipo de Mobiliario:</label>
+          <select id="editDeviceType" class="form-control" size="0">
+            <option value="" disabled style="display: none">Seleccionar</option>
+            <option value="Mesa">Mesa</option>
+            <option value="Escritorio">Escritorio</option>
+            <option value="Silla">Silla</option>
+            <option value="Banca">Banca</option>
+            <option value="Otra">Otra</option>
+          </select>
+          <label for="editMaterial">Material:</label>
+          <input
+            type="text"
+            id="editMaterial"
+            class="form-control"
+            placeholder="Material del mobiliario"
+          />
+          <label for="editColor">Color:</label>
+          <input
+            type="text"
+            id="editColor"
+            class="form-control"
+            placeholder="Color del mobiliario"
+          />
+          <label for="editDimensiones">Dimensiones:</label>
+          <input
+            type="text"
+            id="editDimensiones"
+            class="form-control"
+            placeholder="Dimensiones del mobiliario"
+          />
+          <label for="editAdditionalInfo">Información adicional:</label>
+          <textarea
+            name="message"
+            class="form-control"
+            id="editAdditionalInfo"
+            cols="30"
+            rows="10"
+            placeholder="Comentarios adicionales"
+          ></textarea>
+          <button class="btn academy-btn mt-30" id="btnEditar" type="submit">
+            Editar
+          </button>
+          <button class="btn academy-btn mt-30" id="btnEliminar" type="button">
+            Eliminar
+          </button>
+        </form>
+      </div>
+    </div>
+    <!-- ##### Área de Modal Fin ##### -->
+
+    <!-- ##### Área del Pie de Página Inicio ##### -->
+    <footer class="footer-area">
+      <div class="main-footer-area section-padding-100-0">
+        <div class="container">
+          <div class="row">
+            <!-- Widget del Pie de Página -->
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="footer-widget mb-100">
+                <div class="widget-title">
+                  <a href="#"
+                    ><img
+                      src="img/core-img/logo2.png"
+                      alt="Logo Universidad XYZ"
+                  /></a>
+                </div>
+                <p>
+                  En la Uleam, nos comprometemos con una gestión eficiente y
+                  responsable del inventario de mobiliario.
+                </p>
+                <!-- Enlaces a redes sociales -->
+                <div class="footer-social-info">
+                  <a href="https://www.facebook.com/" target="_blank"
+                    ><i class="fa fa-facebook"></i
+                  ></a>
+                  <a href="https://twitter.com/" target="_blank"
+                    ><i class="fa fa-twitter"></i
+                  ></a>
+                  <a href="https://www.instagram.com/" target="_blank"
+                    ><i class="fa fa-instagram"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <!-- Widget del Pie de Página -->
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="footer-widget mb-100">
+                <div class="widget-title">
+                  <h6>Contacto</h6>
+                </div>
+                <!-- Información de contacto -->
+                <div class="single-contact d-flex mb-30">
+                  <i class="icon-placeholder"></i>
+                  <p>Manta, Manabí, Ecuador</p>
+                </div>
+                <div class="single-contact d-flex mb-30">
+                  <i class="icon-telephone-1"></i>
+                  <p>93-808-8613 <br />Oficina: 99-808-8648</p>
+                </div>
+                <div class="single-contact d-flex">
+                  <i class="icon-contract"></i>
+                  <p>uleam@gmail.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Pie de Página Inferior -->
+      <div class="bottom-footer-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p>
+                <!-- Derechos de autor -->
+                Copyright &copy;
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                Uleam - Gestión de Inventario de Mobiliario | Todos los derechos
+                reservados
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- ##### Scripts JavaScript ##### -->
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <script src="js/plugins/plugins.js"></script>
+    <script src="js/active.js"></script>
+
+    <!-- Sección de funciones JavaScript -->
+    <script>
+      // Función para cargar el inventario
+      function cargarInventario() {
+        // Obtener los registros de mobiliario del almacenamiento local o un arreglo vacío si no hay registros
+        var registros =
+          JSON.parse(localStorage.getItem("registrosMobiliario")) || [];
+        var lista = document.getElementById("inventarioLista");
+        lista.innerHTML = ""; // Limpiar la lista antes de cargar los nuevos registros
+        // Iterar sobre cada registro y crear elementos HTML para mostrar la información
+        registros.forEach(function (registro, index) {
+          var registroDiv = document.createElement("div");
+          registroDiv.classList.add("col-12", "col-md-6", "col-lg-3", "mb-30");
+          registroDiv.dataset.index = index; // Añadir el índice como un atributo de datos para identificar el registro
+          var cuadroDiv = document.createElement("div");
+          cuadroDiv.classList.add("single-contact-info", "text-center");
+          // Mostrar la información del registro en los elementos HTML creados
+          cuadroDiv.innerHTML = `
+            <h6>Tipo de Mobiliario: ${registro.deviceType}</h6>
+            <p><strong>Material</strong>: ${registro.material}</p>
+            <p><strong>Color</strong>: ${registro.color}</p>
+            <p><strong>Dimensiones</strong>: ${registro.dimensiones}</p>
+            <p><strong>Información adicional</strong>: ${registro.message}</p>
+          `;
+          registroDiv.appendChild(cuadroDiv);
+          lista.appendChild(registroDiv); // Agregar el elemento del registro a la lista
+        });
+      }
+
+      // Función que se ejecuta cuando la página se carga completamente
+      window.onload = function () {
+        cargarInventario(); // Cargar el inventario al cargar la página
+        var inventarioContainer = document.getElementById("inventarioLista");
+        // Agregar un evento de clic al contenedor del inventario para manejar clics en los elementos del inventario
+        inventarioContainer.addEventListener("click", function (event) {
+          var target = event.target.closest(".single-contact-info"); // Encontrar el elemento más cercano con la clase .single-contact-info
+          if (target) {
+            var index = parseInt(target.parentElement.dataset.index); // Obtener el índice del registro
+            var registros =
+              JSON.parse(localStorage.getItem("registrosMobiliario")) || [];
+            var registro = registros[index];
+            // Rellenar el formulario de edición con la información del registro seleccionado
+            document.getElementById("editDeviceType").value =
+              registro.deviceType;
+            document.getElementById("editMaterial").value = registro.material;
+            document.getElementById("editColor").value = registro.color;
+            document.getElementById("editDimensiones").value =
+              registro.dimensiones;
+            document.getElementById("editAdditionalInfo").value =
+              registro.message;
+            document.getElementById("modalEditarEliminar").dataset.index =
+              index; // Añadir el índice del registro al modal
+            document.getElementById("modalEditarEliminar").style.display =
+              "block"; // Mostrar el modal
+          }
+        });
+      };
+
+      // Manejar el envío del formulario de edición
+      document.getElementById("editarForm").onsubmit = function (event) {
+        event.preventDefault(); // Evitar el envío del formulario
+        var index = parseInt(
+          document.getElementById("modalEditarEliminar").dataset.index
+        ); // Obtener el índice del registro
+        var registros =
+          JSON.parse(localStorage.getItem("registrosMobiliario")) || [];
+        // Actualizar la información del registro con los datos del formulario
+        registros[index].deviceType =
+          document.getElementById("editDeviceType").value;
+        registros[index].material =
+          document.getElementById("editMaterial").value;
+        registros[index].color = document.getElementById("editColor").value;
+        registros[index].dimensiones =
+          document.getElementById("editDimensiones").value;
+        registros[index].message =
+          document.getElementById("editAdditionalInfo").value;
+        localStorage.setItem("registrosMobiliario", JSON.stringify(registros)); // Actualizar los registros en el almacenamiento local
+        cargarInventario(); // Volver a cargar el inventario para reflejar los cambios
+        document.getElementById("modalEditarEliminar").style.display = "none"; // Ocultar el modal
+      };
+
+      // Evento clic para el botón de eliminar
+      document
+        .getElementById("btnEliminar")
+        .addEventListener("click", function () {
+          var index = parseInt(
+            document.getElementById("modalEditarEliminar").dataset.index
+          ); // Obtener el índice del registro
+          var registros =
+            JSON.parse(localStorage.getItem("registrosMobiliario")) || [];
+          registros.splice(index, 1); // Eliminar el registro del arreglo
+          localStorage.setItem(
+            "registrosMobiliario",
+            JSON.stringify(registros)
+          ); // Actualizar los registros en el almacenamiento local
+          cargarInventario(); // Volver a cargar el inventario para reflejar los cambios
+          document.getElementById("modalEditarEliminar").style.display = "none"; // Ocultar el modal
+        });
+
+      // Función para cerrar el modal
+      function cerrarModal() {
+        document.getElementById("modalEditarEliminar").style.display = "none"; // Ocultar el modal
+      }
+    </script>
+  </body>
+</html>

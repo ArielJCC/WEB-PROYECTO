@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Metadatos -->
+    <meta charset="UTF-8" />
+    <meta name="description" content="" />
+    <!-- Descripción del sitio -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Título -->
+    <title>Uleam - Gestión de Mobiliario</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/core-img/favicon.ico" />
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Hoja de estilos -->
+  </head>
+
+  <body>
+    <!-- Preloader -->
+    <div id="preloader">
+      <i class="circle-preloader"></i>
+    </div>
+
+    <!-- Área del encabezado -->
+    <header class="header-area">
+      <!-- Encabezado superior -->
+      <div class="top-header">
+        <div class="container h-100">
+          <div class="row h-100">
+            <div class="col-12 h-100">
+              <div
+                class="header-content h-100 d-flex align-items-center justify-content-between"
+              >
+                <!-- Logotipo -->
+                <div class="academy-logo">
+                  <a href="Home.html"
+                    ><img src="img/core-img/logo.png" alt=""
+                  /></a>
+                </div>
+                <!-- Contenido de inicio de sesión -->
+                <div class="login-content">
+                  <a href="perfil.html">Perfil &nbsp; </a>
+                  <!-- Enlace al perfil del usuario -->
+                  <!-- Botón para cerrar sesión -->
+                  <a
+                    href="javascript:void(0);"
+                    onclick="confirmarCerrarSesion()"
+                    >Cerrar Sesión</a
+                  >
+                  <script>
+                    // Función para confirmar el cierre de sesión
+                    function confirmarCerrarSesion() {
+                      var confirmacion = confirm(
+                        "¿Estás seguro de que deseas cerrar la sesión?"
+                      ); // Mostrar mensaje de confirmación
+                      if (confirmacion) {
+                        window.location.href = "Registro-Login/login.html"; // Redirigir a la página de inicio de sesión si se acepta
+                      }
+                    }
+                  </script>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Barra de navegación -->
+      <div class="academy-main-menu">
+        <div class="classy-nav-container breakpoint-off">
+          <div class="container">
+            <!-- Menú -->
+            <nav class="classy-navbar justify-content-between" id="academyNav">
+              <!-- Desencadenador de la barra de navegación -->
+              <div class="classy-navbar-toggler">
+                <span class="navbarToggler"
+                  ><span></span><span></span><span></span
+                ></span>
+              </div>
+
+              <!-- Menú -->
+              <div class="classy-menu">
+                <!-- Botón de cierre -->
+                <div class="classycloseIcon">
+                  <div class="cross-wrap">
+                    <span class="top"></span><span class="bottom"></span>
+                  </div>
+                </div>
+
+                <!-- Inicio del menú -->
+                <div class="classynav">
+                  <ul>
+                    <!-- Elementos del menú -->
+                    <li><a href="Home.html">Inicio</a></li>
+                    <li><a href="inventario.html">Inventario</a></li>
+                    <li>
+                      <a href="Asignacion de Mobiliarios.html"
+                        >Asignacion de Mobiliarios</a
+                      >
+                    </li>
+                    <li>
+                      <a href="gestion_mobiliario.html"
+                        >Gestión de Mobiliario</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <!-- Fin del menú -->
+              </div>
+
+              <!-- Información de contacto -->
+              <div class="calling-info">
+                <div class="call-center">
+                  <a href="https://wa.link/cj230k"
+                    ><i class="icon-telephone-2"></i
+                    ><span>(+593) 99 855 4842</span></a
+                  >
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Fin del área del encabezado -->
+
+    <!-- Área del migaja de pan -->
+    <div
+      class="breadcumb-area bg-img"
+      style="background-image: url(img/bg-img/breadcumb.jpg)"
+    >
+      <div class="bradcumbContent">
+        <h2>Recicla tu dispositivo</h2>
+        <!-- Título de la página -->
+      </div>
+    </div>
+    <!-- Fin del área del migaja de pan -->
+
+    <!-- Área del formulario de contacto -->
+    <section class="contact-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="contact-content">
+              <div class="row">
+                <!-- Información de contacto -->
+                <div class="col-12 col-lg-5">
+                  <div
+                    class="contact-information wow fadeInUp"
+                    data-wow-delay="400ms"
+                  >
+                    <div class="section-heading text-left">
+                      <span></span>
+                      <h3>Registro de Mobiliarios</h3>
+                      <!-- Título del formulario -->
+                      <p class="mt-30">Formulario de Registro</p>
+                      <!-- Descripción del formulario -->
+                    </div>
+
+                    <!-- Información social de contacto -->
+                    <div class="contact-social-info d-flex mb-30">
+                      <!-- Iconos de redes sociales -->
+                      <a href="https://www.facebook.com/" target="_blank"
+                        ><i class="fa fa-facebook" aria-hidden="true"></i
+                      ></a>
+                      <a href="https://twitter.com/" target="_blank"
+                        ><i class="fa fa-twitter" aria-hidden="true"></i
+                      ></a>
+                      <a href="https://www.instagram.com/" target="_blank"
+                        ><i class="fa fa-instagram" aria-hidden="true"></i
+                      ></a>
+                    </div>
+
+                    <!-- Información de contacto individual -->
+                    <div class="single-contact-info d-flex">
+                      <div class="contact-icon mr-15">
+                        <i class="icon-placeholder"></i>
+                        <!-- Icono de ubicación -->
+                      </div>
+                      <p>
+                        Manta, Manabí,<br />
+                        Ecuador
+                      </p>
+                    </div>
+
+                    <!-- Información de contacto individual -->
+                    <div class="single-contact-info d-flex">
+                      <div class="contact-icon mr-15">
+                        <i class="icon-telephone-1"></i>
+                        <!-- Icono de teléfono -->
+                      </div>
+                      <p>
+                        93-808-4344 <br />
+                        Empresa: 99-808-8648
+                      </p>
+                    </div>
+
+                    <!-- Información de contacto individual -->
+                    <div class="single-contact-info d-flex">
+                      <div class="contact-icon mr-15">
+                        <i class="icon-contract"></i>
+                        <!-- Icono de correo electrónico -->
+                      </div>
+                      <p>Uleam@gmail.com</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Área del formulario de contacto -->
+                <div class="col-12 col-lg-7">
+                  <div
+                    class="contact-form-area wow fadeInUp"
+                    data-wow-delay="500ms"
+                  >
+                    <form id="miFormulario">
+                      <!-- Etiqueta y campo de selección para el tipo de mobiliario -->
+                      <label for="deviceType">Tipo de Mobiliario:</label>
+                      <select id="deviceType" class="form-control" size="0">
+                        <option
+                          value=""
+                          selected
+                          disabled
+                          style="display: none"
+                        >
+                          Seleccionar
+                        </option>
+                        <option value="Mesa">Mesa</option>
+                        <option value="Escritorio">Escritorio</option>
+                        <option value="Silla">Silla</option>
+                        <option value="Banca">Banca</option>
+                        <option value="´otra´">
+                          Otros, especifique en la información adicional
+                        </option>
+                      </select>
+                      <!-- Campos para más información del mobiliario -->
+                      <label for="material">Material:</label>
+                      <input
+                        type="text"
+                        id="material"
+                        class="form-control"
+                        placeholder="Material del mobiliario"
+                      />
+
+                      <label for="color">Color:</label>
+                      <input
+                        type="text"
+                        id="color"
+                        class="form-control"
+                        placeholder="Color del mobiliario"
+                      />
+                      <label for="dimensiones">Dimensiones:</label>
+                      <input
+                        type="text"
+                        id="dimensiones"
+                        class="form-control"
+                        placeholder="Dimensiones del mobiliario"
+                      />
+                      <!-- Comentarios adicionales -->
+                      <label for="additionalInfo">Información adicional:</label>
+                      <textarea
+                        name="message"
+                        class="form-control"
+                        id="additionalInfo"
+                        cols="30"
+                        rows="3"
+                        style="max-height: 0"
+                        placeholder="Comentarios adicionales"
+                      ></textarea>
+                      <button class="btn academy-btn mt-30" type="submit">
+                        Registrar
+                      </button>
+                      <!-- Botón de registro -->
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Fin del área del formulario de contacto -->
+
+    <!-- Área del pie de página -->
+    <footer class="footer-area">
+      <div class="main-footer-area section-padding-100-0">
+        <div class="container">
+          <div class="row">
+            <!-- Widget de pie de página -->
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="footer-widget mb-100">
+                <div class="widget-title">
+                  <a href="#"
+                    ><img
+                      src="img/core-img/logo2.png"
+                      alt="Logo Universidad XYZ"
+                  /></a>
+                </div>
+                <p>
+                  En la Uleam, nos comprometemos con una gestión eficiente y
+                  responsable del inventario de mobiliario.
+                </p>
+                <!-- Iconos de redes sociales -->
+                <div class="footer-social-info">
+                  <a href="https://www.facebook.com/" target="_blank"
+                    ><i class="fa fa-facebook"></i
+                  ></a>
+                  <a href="https://twitter.com/" target="_blank"
+                    ><i class="fa fa-twitter"></i
+                  ></a>
+                  <a href="https://www.instagram.com/" target="_blank"
+                    ><i class="fa fa-instagram"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <!-- Widget de pie de página -->
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="footer-widget mb-100">
+                <div class="widget-title">
+                  <h6>Contacto</h6>
+                </div>
+                <!-- Información de contacto individual -->
+                <div class="single-contact d-flex mb-30">
+                  <i class="icon-placeholder"></i>
+                  <p>Manta, Manabí, Ecuador</p>
+                </div>
+                <!-- Información de contacto individual -->
+                <div class="single-contact d-flex mb-30">
+                  <i class="icon-telephone-1"></i>
+                  <p>93-808-8613 <br />Oficina: 99-808-8648</p>
+                </div>
+                <!-- Información de contacto individual -->
+                <div class="single-contact d-flex">
+                  <i class="icon-contract"></i>
+                  <p>uleam@gmail.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Área del pie de página inferior -->
+      <div class="bottom-footer-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p>
+                Copyright &copy;
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                Uleam - Gestión de Inventario de Mobiliario | Todos los derechos
+                reservados
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Fin del área del pie de página -->
+
+    <!-- Todos los scripts de Javascript -->
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <script src="js/plugins/plugins.js"></script>
+    <script src="js/active.js"></script>
+    <!-- Script adicional -->
+    <script>
+      // Función para manejar el envío del formulario
+      document.getElementById("miFormulario").onsubmit = function (event) {
+        event.preventDefault(); // Prevenir el envío del formulario por defecto
+
+        // Capturar los valores del formulario
+        var deviceType = document.getElementById("deviceType").value;
+        var material = document.getElementById("material").value;
+        var color = document.getElementById("color").value;
+        var dimensiones = document.getElementById("dimensiones").value;
+        var message = document.getElementById("additionalInfo").value;
+
+        // Expresiones regulares para validar los campos
+        var regexMaterial = /^[a-zA-Z0-9\s]+$/; // Material (letras, números y espacios)
+        var regexColor = /^[a-zA-Z\s]+$/; // Color (letras y espacios)
+        var regexDimensiones = /^[\w\s.,()-]+$/; // Dimensiones (letras, números, espacios y caracteres especiales)
+        var regex = /\S+/; // Comentarios adicionales (cualquier carácter excepto espacios en blanco)
+
+        // Validación de los campos del formulario
+        if (!regexMaterial.test(material)) {
+          alert("Por favor, ingrese el nombre de un Material.");
+          return;
+        }
+        if (!regexColor.test(color)) {
+          alert("Por favor, ingrese el nombre de un color.");
+          return;
+        }
+        if (!regexDimensiones.test(dimensiones)) {
+          alert("Por favor, ingrese las dimensiones del mobiliario.");
+          return;
+        }
+        if (!regex.test(message)) {
+          alert(
+            "Por favor, ingrese alguna informacion adicional (En caso de no tener informacion adicional coloque la palabra: Ninguna)"
+          );
+          return;
+        }
+        // Recuperar los registros existentes del almacenamiento local
+        var registros =
+          JSON.parse(localStorage.getItem("registrosMobiliario")) || [];
+
+        // Crear un nuevo registro con los campos adicionales
+        var nuevoRegistro = {
+          deviceType: deviceType,
+          material: material,
+          color: color,
+          dimensiones: dimensiones,
+          message: message,
+        };
+
+        // Agregar el nuevo registro a la lista de registros
+        registros.push(nuevoRegistro);
+
+        // Guardar la lista actualizada en el almacenamiento local
+        localStorage.setItem("registrosMobiliario", JSON.stringify(registros));
+
+        // Mostrar un mensaje de confirmación
+        alert("¡Registro exitoso!");
+
+        // Limpiar el formulario después de procesar los datos (opcional)
+        document.getElementById("miFormulario").reset();
+
+        // Llamar a cargarInventario para actualizar la lista de registros
+        cargarInventario();
+      };
+
+      // Llamar a cargarInventario cuando la página se cargue por primera vez
+      window.onload = cargarInventario;
+    </script>
+  </body>
+</html>

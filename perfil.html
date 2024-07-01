@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Título -->
+    <title>Uleam - Perfil de usuario</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/core-img/favicon.ico" />
+
+    <!-- Hoja de estilo principal -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- ##### Preloader ##### -->
+    <div id="preloader">
+      <i class="circle-preloader"></i>
+    </div>
+
+    <!-- ##### Área de encabezado ##### -->
+    <header class="header-area">
+      <!-- Encabezado superior -->
+      <div class="top-header">
+        <div class="container h-100">
+          <div class="row h-100">
+            <div class="col-12 h-100">
+              <div
+                class="header-content h-100 d-flex align-items-center justify-content-between"
+              >
+                <div class="academy-logo">
+                  <a href="Home.html"
+                    ><img src="img/core-img/logo.png" alt=""
+                  /></a>
+                </div>
+                <div class="login-content">
+                  <a href="perfil.html">Perfil &nbsp; </a>
+                  <!-- Función para confirmar el cierre de sesión -->
+                  <a href="javascript:void(0);" onclick="confirmarCerrarSesion()">Cerrar Sesión</a>
+                  <script>
+                    function confirmarCerrarSesion() {
+                      var confirmacion = confirm("¿Estás seguro de que deseas cerrar la sesión?");
+                      if (confirmacion) {
+                        window.location.href = "Registro-Login/login.html";
+                      }
+                    }
+                  </script>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Barra de navegación -->
+      <div class="academy-main-menu">
+        <div class="classy-nav-container breakpoint-off">
+          <div class="container">
+            <!-- Menú -->
+            <nav class="classy-navbar justify-content-between" id="academyNav">
+              <!-- Interruptor de navegación -->
+              <div class="classy-navbar-toggler">
+                <span class="navbarToggler"
+                  ><span></span><span></span><span></span
+                ></span>
+              </div>
+
+              <!-- Menú -->
+              <div class="classy-menu">
+                <!-- Botón de cierre -->
+                <div class="classycloseIcon">
+                  <div class="cross-wrap">
+                    <span class="top"></span><span class="bottom"></span>
+                  </div>
+                </div>
+
+                <!-- Navegación -->
+                <div class="classynav">
+                  <ul>
+                    <li><a href="Home.html">Inicio</a></li>
+                    <li><a href="inventario.html">Inventario</a></li>
+                    <li><a href="Asignacion de Mobiliarios.html">Asignacion de Mobiliarios</a></li>
+                    <li><a href="gestion_mobiliario.html">Gestión de Mobiliario</a></li>
+                  </ul>
+                </div>
+                <!-- Fin de la navegación -->
+              </div>
+
+              <!-- Información de contacto -->
+              <div class="calling-info">
+                <div class="call-center">
+                  <a href="https://wa.link/cj230k"
+                    ><i class="icon-telephone-2"></i>
+                    <span>(+593) 99 855 4842</span></a
+                  >
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Fin del área de encabezado -->
+
+    <!-- ##### Sección de perfil de usuario ##### -->
+    <div
+      class="breadcumb-area bg-img"
+      style="background-image: url(img/bg-img/breadcumb.jpg)"
+    >
+      <div class="bradcumbContent">
+        <h2>
+          <!-- Sección de perfil de usuario -->
+          <div class="user-profile-section">
+            <h2>Perfil de Usuario</h2>
+            <div class="user-info">
+              <div class="mt-4 text-center"></div>
+              <p><strong>Usuario:</strong></p>
+              <div class="mt-4 text-center"></div>
+              <p><strong>E-mail:</strong></p>
+            </div>
+          </div>
+        </h2>
+      </div>
+    </div>
+
+    <!-- ##### Área de cursos populares superiores ##### -->
+    <div class="top-popular-courses-area mt-50 section-padding-100-70">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div
+              class="section-heading text-center mx-auto wow fadeInUp"
+              data-wow-delay="300ms"
+            >
+              <h3>Tus Mobiliarios Asignados</h3>
+            </h3>
+          </div>
+        </div>
+        <div class="row" id="deviceContainer">
+          <!-- Aquí se agregarán los Mobiliarios -->
+        </div>
+      </div>
+    </div>
+    <!-- ##### Área de pie de página ##### -->
+    <footer class="footer-area">
+      <div class="main-footer-area section-padding-100-0">
+        <div class="container">
+          <div class="row">
+            <!-- Área de widget de pie de página -->
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="footer-widget mb-100">
+                <div class="widget-title">
+                  <a href="#"
+                    ><img
+                      src="img/core-img/logo2.png"
+                      alt="Logo Universidad XYZ"
+                  /></a>
+                </div>
+                <p>
+                  En la Uleam, nos comprometemos con una gestión
+                  eficiente y responsable del inventario de mobiliario.
+                </p>
+                <div class="footer-social-info">
+                  <a href="https://www.facebook.com/" target="_blank"
+                    ><i class="fa fa-facebook"></i
+                  ></a>
+                  <a href="https://twitter.com/" target="_blank"
+                    ><i class="fa fa-twitter"></i
+                  ></a>
+                  <a href="https://www.instagram.com/" target="_blank"
+                    ><i class="fa fa-instagram"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <!-- Área de widget de pie de página -->
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="footer-widget mb-100">
+                <div class="widget-title">
+                  <h6>Contacto</h6>
+                </div>
+                <div class="single-contact d-flex mb-30">
+                  <i class="icon-placeholder"></i>
+                  <p>Manta, Manabí, Ecuador</p>
+                </div>
+                <div class="single-contact d-flex mb-30">
+                  <i class="icon-telephone-1"></i>
+                  <p>93-808-8613 <br />Oficina: 99-808-8648</p>
+                </div>
+                <div class="single-contact d-flex">
+                  <i class="icon-contract"></i>
+                  <p>uleam@gmail.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-footer-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p>
+                <!-- El enlace de regreso a Colorlib no se puede eliminar. La plantilla está bajo licencia CC BY 3.0. -->
+                Derechos de autor &copy;
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                Uleam - Gestión de Inventario de Mobiliario | Todos los derechos reservados
+                <!-- El enlace de regreso a Colorlib no se puede eliminar. La plantilla está bajo licencia CC BY 3.0. -->
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Fin del área de pie de página -->
+
+    <!-- ##### Todos los scripts de JavaScript ##### -->
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <script src="js/plugins/plugins.js"></script>
+    <script src="js/active.js"></script>   
+  </body>
+</html>
+
+               
